@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Help us improve Kanji Translator</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%23e8a33d%27/%3E%3Cg transform=%27translate(9 9) scale(1.833)%27 fill=%27none%27 stroke=%27%231b1815%27 stroke-width=%271.25%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M2.6 4.2h6.8M6 2.2v2M3.4 6.3h5.2M6 6.3v2.6q0 1.1-1.1 1.1H4%27/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="328e350f-b770-4529-9500-92b514123a6c"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: #1b1815; color: #f2ece2;
+    font: 17px/1.55 "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+  }
+  .brand { display: flex; align-items: center; gap: 13px; }
+  .mark { display: flex; flex: 0 0 auto; }
+  .brand b { font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+
+  .shell { max-width: 640px; margin: 0 auto; padding: 56px 24px 80px; }
+  .brand { margin-bottom: 36px; }
+
+  .intro h1 { font-size: 32px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; }
+  .intro p { margin-top: 12px; color: #b3a996; max-width: 52ch; text-wrap: pretty; }
+
+  form { margin-top: 8px; }
+  .intro + form { margin-top: 28px; }
+  .q { display: block; font-size: 14px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #e8a33d; }
+
+  .options { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+  .opt {
+    position: relative; display: flex; align-items: center; gap: 12px;
+    border: 1px solid #3a332c; border-radius: 12px; background: #262220;
+    padding: 14px 16px; cursor: pointer; font-size: 16.5px;
+    transition: border-color .15s ease, background .15s ease;
+  }
+  .opt:hover { border-color: #5a5148; }
+  .opt input { position: absolute; opacity: 0; }
+  .opt .dot {
+    width: 20px; height: 20px; border-radius: 50%; flex: 0 0 auto;
+    border: 2px solid #5a5148; transition: border-color .15s ease;
+  }
+  .opt:has(input:checked) { border-color: #e8a33d; background: #2c2620; }
+  .opt:has(input:checked) .dot { border-color: #e8a33d; border-width: 6px; }
+  .opt:has(input:focus-visible) { outline: 2px solid #e8a33d; outline-offset: 2px; }
+
+  .q2 { margin-top: 28px; }
+  textarea {
+    display: block; margin-top: 14px; width: 100%; min-height: 96px; resize: vertical;
+    border: 1px solid #3a332c; border-radius: 12px; background: #262220;
+    color: #f2ece2; padding: 13px 16px; font: inherit; font-size: 16px;
+  }
+  .intro + form textarea { margin-top: 0; min-height: 132px; }
+  textarea::placeholder { color: #8f867a; }
+  textarea:focus-visible { outline: 2px solid #e8a33d; outline-offset: 1px; border-color: #e8a33d; }
+
+  .send {
+    margin-top: 24px; padding: 14px 28px; border: 0; border-radius: 12px;
+    background: #e8a33d; color: #1b1815; font: inherit; font-size: 17px; font-weight: 700;
+    cursor: pointer;
+  }
+  .send:hover { background: #f0b254; }
+
+  .note { margin-top: 28px; font-size: 14px; color: #8f867a; max-width: 56ch; }
+  .note a { color: #b3a996; }
+
+  .thanks { display: none; }
+  .thanks h2 { font-size: 26px; letter-spacing: -0.01em; }
+  .thanks p { margin-top: 10px; color: #b3a996; max-width: 52ch; }
+  body[data-sent="true"] .intro,
+  body[data-sent="true"] form { display: none; }
+  body[data-sent="true"] .thanks { display: block; }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#e8a33d"></rect><g transform="translate(9 9) scale(1.833)" fill="none" stroke="#1b1815" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 4.2h6.8M6 2.2v2M3.4 6.3h5.2M6 6.3v2.6q0 1.1-1.1 1.1H4"></path></g></svg></span>
+      <b>Kanji Translator</b>
+    </div>
+
+    <div class="intro">
+      <h1 id="fb-q">What went wrong?</h1>
+      <p id="fb-hint">Tell us what didn't work.</p>
+    </div>
+
+    <form id="feedback">
+      <textarea id="details" name="details" aria-labelledby="fb-q" aria-describedby="fb-hint" placeholder="For example: the reading was wrong for …"></textarea>
+      <button class="send" type="submit">Send</button>
+    </form>
+
+    <div class="thanks">
+      <h2>Thank you. Every answer counts.</h2>
+      <p>You can close this tab now.</p>
+    </div>
+
+    <p class="note">Prefer a conversation? <a href="https://github.com/anastasialekasova-hub/kanji-translator-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.</p>
+  </div>
+
+<script>
+  // Responses land in a Google Form. FORM_ID and entry ids are filled in at the form step;
+  // while they are empty, Send only shows the thank-you state.
+  var FORM_ID = '';
+  var ENTRY_DETAILS = '';
+
+  document.getElementById('feedback').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var details = document.querySelector('textarea[name="details"]').value.trim();
+
+    if (FORM_ID && ENTRY_DETAILS && details) {
+      var data = new FormData();
+      data.append(ENTRY_DETAILS, details);
+      fetch('https://docs.google.com/forms/d/e/' + FORM_ID + '/formResponse',
+        { method: 'POST', mode: 'no-cors', body: data }).catch(function () {});
+    }
+    document.body.dataset.sent = 'true';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kanji Translator is installed</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Crect width=%2740%27 height=%2740%27 rx=%279%27 fill=%27%23e8a33d%27/%3E%3Cg transform=%27translate(9 9) scale(1.833)%27 fill=%27none%27 stroke=%27%231b1815%27 stroke-width=%271.25%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M2.6 4.2h6.8M6 2.2v2M3.4 6.3h5.2M6 6.3v2.6q0 1.1-1.1 1.1H4%27/%3E%3C/g%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600;700&display=swap">
+<script defer src="https://cloud.umami.is/script.js" data-website-id="328e350f-b770-4529-9500-92b514123a6c"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: #1b1815; color: #f2ece2;
+    font: 17px/1.55 "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+    font-synthesis: none;
+  }
+  .brand { display: flex; align-items: center; gap: 13px; }
+  .mark { display: flex; flex: 0 0 auto; }
+  .brand b { font-size: 15px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+
+  .shell { max-width: 780px; margin: 0 auto; padding: 32px 24px 80px; }
+  .brand { margin-bottom: 26px; }
+
+  h1 { font-size: 31px; line-height: 1.16; letter-spacing: -0.02em; text-wrap: balance; }
+  h1 em { font-style: normal; color: #e8a33d; }
+  .lede { margin-top: 12px; font-size: 18px; color: #b3a996; max-width: 56ch; }
+  .nw { white-space: nowrap; }
+
+  .step { margin-top: 34px; }
+  .step h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
+  .step > p { margin-top: 8px; color: #b3a996; max-width: 58ch; }
+
+  /* Annotated screenshots break out of the text column so the UI reads big. */
+  .shot {
+    position: relative; margin-top: 16px; border-radius: 14px; overflow: hidden;
+    border: 1px solid #3a332c; box-shadow: 0 18px 50px rgba(0,0,0,.4); background: #262220;
+    width: min(94vw, 1000px);
+    left: 50%; transform: translateX(-50%);
+  }
+  .shot img { width: 100%; height: auto; display: block; }
+
+  /* A line to try the context menu on right here. */
+  .try { margin-top: 18px; border: 1px solid #3a332c; border-radius: 14px; background: #262220; padding: 18px 22px 20px; }
+  .try .q { font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #e8a33d; }
+  .try .jp {
+    margin-top: 8px; color: #f2ece2; user-select: text;
+    font: 500 26px/1.45 "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans JP", sans-serif;
+  }
+  .try .how { margin-top: 6px; font-size: 15px; color: #b3a996; }
+
+  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid #3a332c; font-size: 14px; color: #8f867a; }
+  footer a { color: #b3a996; }
+</style>
+</head>
+<body>
+  <div class="shell">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#e8a33d"></rect><g transform="translate(9 9) scale(1.833)" fill="none" stroke="#1b1815" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="M2.6 4.2h6.8M6 2.2v2M3.4 6.3h5.2M6 6.3v2.6q0 1.1-1.1 1.1H4"></path></g></svg></span>
+      <b>Kanji Translator</b>
+    </div>
+
+    <h1>Kanji Translator is installed. Select text, <span class="nw">right-click</span> — <em>get the translation with kana and romaji.</em></h1>
+    <p class="lede">Chrome hides new extensions behind the puzzle icon. Pin Kanji Translator first — it takes two clicks. No new tab page, no home page changes, nothing runs until you ask.</p>
+
+    <section class="step">
+      <div class="shot">
+        <img src="step-1-2-pin.png" alt="Chrome toolbar with the Extensions menu open: 1 — click the puzzle icon, 2 — click the pin next to Kanji Translator" width="2000" height="738">
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Select text, <span class="nw">right-click</span>, and choose “Translate with Kanji Translator”</h2>
+      <p>It works with English and Japanese on any website. The translation appears in a card next to the text.</p>
+      <div class="shot">
+        <img src="step-3-context-menu.png" alt="Japanese text selected on a web page and the right-click menu: 3 — Translate with Kanji Translator" width="2000" height="1067">
+      </div>
+      <div class="try">
+        <p class="q">Try it here</p>
+        <p class="jp" lang="ja">この電車は京都駅に止まりますか？</p>
+        <p class="how">Select the line, right-click, and choose “Translate with Kanji Translator”.</p>
+      </div>
+    </section>
+
+    <section class="step">
+      <h2>Click the icon to type or paste text</h2>
+      <p>Type English or Japanese and press Translate. Some pages, like Google Docs, don’t let extensions read the selection — copy the text and paste it into the popup.</p>
+      <div class="shot">
+        <img src="step-4-popup.png" alt="The Kanji Translator popup opened from the pinned toolbar icon (4), with the Japanese translation, hiragana reading and romaji" width="2000" height="1190">
+      </div>
+    </section>
+
+    <footer>
+      Questions or a bug? <a href="https://github.com/anastasialekasova-hub/kanji-translator-pages/issues" target="_blank" rel="noopener">Open an issue on GitHub</a>.
+      &nbsp;·&nbsp; <a href="https://pinwisp.com/kanji-translator/privacy/" target="_blank" rel="noopener">Privacy</a>
+    </footer>
+  </div>
+</body>
+</html>
