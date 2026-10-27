@@ -23,25 +23,23 @@
   .brand { margin-bottom: 26px; }
 
   h1 { font-size: 31px; line-height: 1.16; letter-spacing: -0.02em; text-wrap: balance; }
-  h1 em { font-style: normal; color: #e8a33d; }
   .lede { margin-top: 12px; font-size: 18px; color: #b3a996; max-width: 56ch; }
   .nw { white-space: nowrap; }
 
   .step { margin-top: 34px; }
   .step h2 { font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
   .step > p { margin-top: 8px; color: #b3a996; max-width: 58ch; }
+  .step > .shot + p { margin-top: 16px; }
 
-  /* Annotated screenshots break out of the text column so the UI reads big. */
   .shot {
     position: relative; margin-top: 16px; border-radius: 14px; overflow: hidden;
     border: 1px solid #3a332c; box-shadow: 0 18px 50px rgba(0,0,0,.4); background: #262220;
-    width: min(94vw, 1000px);
-    left: 50%; transform: translateX(-50%);
+    width: 100%; max-width: 680px;
   }
   .shot img { width: 100%; height: auto; display: block; }
 
-  /* A line to try the context menu on right here. */
-  .try { margin-top: 18px; border: 1px solid #3a332c; border-radius: 14px; background: #262220; padding: 18px 22px 20px; }
+  /* A line to try the context menu on right here, right after pinning (steps 1–2). */
+  .try { max-width: 680px; margin-top: 18px; border: 1px solid #3a332c; border-radius: 14px; background: #262220; padding: 18px 22px 20px; }
   .try .q { font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: #e8a33d; }
   .try .jp {
     margin-top: 8px; color: #f2ece2; user-select: text;
@@ -60,31 +58,34 @@
       <b>Kanji Translator</b>
     </div>
 
-    <h1>Kanji Translator is installed. Select text, <span class="nw">right-click</span> — <em>get the translation with kana and romaji.</em></h1>
+    <h1>Kanji Translator is installed.</h1>
     <p class="lede">Chrome hides new extensions behind the puzzle icon. Pin Kanji Translator first — it takes two clicks. No new tab page, no home page changes, nothing runs until you ask.</p>
 
     <section class="step">
+      <h2>1. Click the puzzle icon</h2>
+      <h2>2. Click the pin next to Kanji Translator</h2>
       <div class="shot">
-        <img src="step-1-2-pin.png" alt="Chrome toolbar with the Extensions menu open: 1 — click the puzzle icon, 2 — click the pin next to Kanji Translator" width="2000" height="738">
+        <img src="step-1-2-pin.png" alt="Chrome toolbar with the Extensions menu open: 1 — click the puzzle icon, 2 — click the pin next to Kanji Translator" width="2000" height="523">
       </div>
     </section>
 
+    <div class="try">
+      <p class="q">Try it here</p>
+      <p class="jp" lang="ja">この電車は京都駅に止まりますか？</p>
+      <p class="how">Select the line, right-click, and choose “Translate with Kanji Translator”.</p>
+    </div>
+
     <section class="step">
-      <h2>Select text, <span class="nw">right-click</span>, and choose “Translate with Kanji Translator”</h2>
-      <p>It works with English and Japanese on any website. The translation appears in a card next to the text.</p>
+      <h2>3. Select text, <span class="nw">right-click</span>, and choose “Translate with Kanji Translator”</h2>
       <div class="shot">
         <img src="step-3-context-menu.png" alt="Japanese text selected on a web page and the right-click menu: 3 — Translate with Kanji Translator" width="2000" height="1067">
       </div>
-      <div class="try">
-        <p class="q">Try it here</p>
-        <p class="jp" lang="ja">この電車は京都駅に止まりますか？</p>
-        <p class="how">Select the line, right-click, and choose “Translate with Kanji Translator”.</p>
-      </div>
+      <p>It works with English and Japanese on most websites. The translation appears in a card next to the text.</p>
     </section>
 
     <section class="step">
-      <h2>Click the icon to type or paste text</h2>
-      <p>Type English or Japanese and press Translate. Some pages, like Google Docs, don’t let extensions read the selection — copy the text and paste it into the popup.</p>
+      <h2>4. Click the icon to type or paste text</h2>
+      <p>Type English or Japanese and press Translate.</p>
       <div class="shot">
         <img src="step-4-popup.png" alt="The Kanji Translator popup opened from the pinned toolbar icon (4), with the Japanese translation, hiragana reading and romaji" width="2000" height="1190">
       </div>
